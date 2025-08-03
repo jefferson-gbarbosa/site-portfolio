@@ -1,0 +1,72 @@
+---
+import screenshot01 from '../assets/screenshot-01.png';
+import screenshot02 from '../assets/screenshot-02.png';
+import screenshot03 from '../assets/screenshot-03.png';
+import screenshot04 from '../assets/screenshot-04.png';
+import screenshot05 from '../assets/screenshot-05.png';
+import screenshot06 from '../assets/screenshot-06.png';
+const projects = [
+  {
+    image: screenshot01,
+    alt: "IP Address Tracker project",
+    link: "https://github.com/jefferson-gbarbosa/ip-address-tracker"
+  },
+  {
+    image: screenshot02,
+    alt: "App Auth Web project",
+    link: "https://github.com/jefferson-gbarbosa/app-auth-web"
+  },
+  {
+    image: screenshot03,
+    alt: "Shortly URL Shortener project",
+    link: "https://github.com/jefferson-gbarbosa/shortly-url-shortening"
+  },
+  {
+    image: screenshot04,
+    alt: "Todo List project",
+    link: "https://github.com/jefferson-gbarbosa/todo-list"
+  },
+  {
+    image: screenshot05,
+    alt: "Conversor de Moedas project",
+    link: "https://github.com/jefferson-gbarbosa/conversor-de-moedas"
+  },
+  {
+    image: screenshot06,
+    alt: "NLW Unite React project",
+    link: "https://github.com/jefferson-gbarbosa/nlw-unite-react"
+  }
+];
+---
+
+
+<div class="py-12">
+  <h2 class="text-center text-[#1e1e1e] pb-4 font-extrabold text-2xl">Portfolio</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {projects.map(({ image, alt, link }) => (
+      <div class="w-full max-w-xs mx-auto rounded-sm overflow-hidden bg-white hover:scale-105 transition-transform">
+        <div class="w-auto h-[350px]">
+          <img 
+            src={image.src} 
+            alt={alt} 
+            width={image.width} 
+            height={image.height}
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="bg-[#DDEAF0] border border-[#D9D9D9] rounded-b-sm">
+          <a 
+            href={link} 
+            aria-label={`Ver repositório de ${alt}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block text-center text-[#4F4F4F] font-semibold py-4 hover:text-[#1E1E1E] transition-colors"
+          >
+            GitHub - Live Demo
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
