@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro";
 const { description, title } = Astro.props
 ---
 
@@ -10,13 +11,33 @@ const { description, title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="keywords" content="desenvolvedor, portfolio, web, Jefferson, dev, projetos, tecnologia" />
+    <meta name="author" content="Jefferson Gonçalves Barbosa" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio-jefferson-dev.netlify.app" />
+    <meta property="og:image" content="/thumb-og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/thumb-og.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://portfolio-jefferson-dev.netlify.app/" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
   </head>
 
   <body>
     <Header />
-    <slot />
+    <main class="bg-[#EAF6FA]">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
