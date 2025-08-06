@@ -1,0 +1,25 @@
+---
+import IconArrow from "./icons/IconArrow.astro";
+
+---
+
+<div id="scroll-top-btn" class="fixed bottom-6 right-6 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+  <button class="bg-[#161713] text-[#e1eeef] hover:bg-[#909493] hover:text-[#161713] p-3 rounded-full shadow-lg">
+    <IconArrow />
+  </button>
+</div>
+
+<script is:inline>
+  const btn = document.getElementById('scroll-top-btn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
