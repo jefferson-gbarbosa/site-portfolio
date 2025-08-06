@@ -1,10 +1,12 @@
 ---
+import {Image} from "astro:assets";
 import screenshot01 from '../assets/screenshot-01.png';
 import screenshot02 from '../assets/screenshot-02.png';
 import screenshot03 from '../assets/screenshot-03.png';
 import screenshot04 from '../assets/screenshot-04.png';
 import screenshot05 from '../assets/screenshot-05.png';
 import screenshot06 from '../assets/screenshot-06.png';
+
 const projects = [
   {
     image: screenshot01,
@@ -45,11 +47,9 @@ const projects = [
     {projects.map(({ image, alt, link }) => (
       <div class="w-full max-w-xs mx-auto rounded-sm overflow-hidden bg-white hover:scale-105 transition-transform">
         <div class="w-auto h-[350px]">
-          <img 
-            src={image.src} 
+          <Image
+            src={image} 
             alt={alt} 
-            width={image.width} 
-            height={image.height}
             loading="lazy"
             class="w-full h-full object-cover"
           />

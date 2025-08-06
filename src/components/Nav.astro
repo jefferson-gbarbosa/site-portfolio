@@ -1,18 +1,21 @@
 ---
+import {Image} from "astro:assets";
 import IconDio from "./icons/IconDio.astro";
 import IconFronEndMentor from "./icons/IconFronEndMentor.astro";
 import IconGithub from "./icons/IconGithub.astro";
 import IconLinkedin from "./icons/IconLinkedin.astro";
+import Bg from '../../public/bg.jpg'
+import Me from '../../public/me.png'
 
 ---
  <nav class='relative min-h-screen w-full flex items-center justify-center overflow-hidden'>  
-        <img src='/bg.jpg' alt="background" class="absolute inset-0 w-full h-full object-cover -z-10"/>
+        <Image src={Bg} alt="background" class="absolute inset-0 w-full h-full object-cover -z-10" loading="eager"/>
         <div class="absolute inset-0 bg-[#161713] opacity-80 -z-10" />
         <div>
             <div class="grid place-items-center">
             <div class="border-4 border-[#fbfefd] w-36 h-36 justify-self-center rounded-full grid place-items-center">
                 <div class="w-32 h-32 border flex items-end justify-center rounded-full overflow-hidden">
-                    <img src="/me.png" alt='Perfil'/>
+                    <Image src={Me} alt="Perfil" loading="eager"/>
                 </div>
             </div>
             <h2 class="text-xl text-[#e1eeef] font-semibold">Jefferson Gonçalves</h2>
