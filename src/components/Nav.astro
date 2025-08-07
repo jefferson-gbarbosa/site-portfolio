@@ -6,34 +6,51 @@ import IconGithub from "./icons/IconGithub.astro";
 import IconLinkedin from "./icons/IconLinkedin.astro";
 import Bg from '../../public/bg.jpg'
 import Me from '../../public/me.png'
+import IconArrowBarToDown from "./icons/IconArrowBarToDown.astro";
 
 ---
  <nav class='relative min-h-screen w-full flex items-center justify-center overflow-hidden'>  
-        <Image src={Bg} alt="background" class="absolute inset-0 w-full h-full object-cover -z-10" loading="eager"/>
-        <div class="absolute inset-0 bg-[#161713] opacity-80 -z-10" />
-        <div>
-            <div class="grid place-items-center">
-            <div class="border-4 border-[#fbfefd] w-36 h-36 justify-self-center rounded-full grid place-items-center">
-                <div class="w-32 h-32 border flex items-end justify-center rounded-full overflow-hidden">
-                    <Image src={Me} alt="Perfil" loading="eager"/>
-                </div>
+    <Image src={Bg} alt="background" class="absolute inset-0 w-full h-full object-cover -z-10" loading="eager"/>
+    <div class="absolute inset-0 bg-[#161713] opacity-80 -z-10" />
+    <div class="grid place-items-center">
+        <div class="border-4 border-[#fbfefd] w-28 sm:w-36 h-28 sm:h-36 mx-auto rounded-full grid place-items-center">
+            <div class="w-24 sm:w-32 h-24 sm:h-32 border flex items-end justify-center rounded-full overflow-hidden">
+                <Image src={Me} alt="Perfil" loading="eager"/>
             </div>
-            <h2 class="text-xl text-[#e1eeef] font-semibold">Jefferson Gonçalves</h2>
-            <h3 class="text-base font-medium text-[#909493]">Desenvolvedor Front End</h3>
-            <ul class='flex items-center gap-3 pt-4 '>
-                <a href="https://www.linkedin.com/in/jefferson-gbarbosa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="transform transition-transform duration-300 ease-in-out hover:scale-125">
-                    <IconLinkedin class="text-[#eaf6fa]"/>
-                </a>
-                <a href="https://github.com/jefferson-gbarbosa" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="transform transition-transform duration-300 ease-in-out hover:scale-125">
-                    <IconGithub class="text-[#eaf6fa]"/>
-                </a>
-                <a href="https://www.frontendmentor.io/profile/jefferson-gbarbosa" target="_blank" rel="noopener noreferrer" aria-label="Front End Mentor" class="transform transition-transform duration-300 ease-in-out hover:scale-125">
-                    <IconFronEndMentor class="text-[#eaf6fa]"/>
-                </a>
-                <a href="https://www.dio.me/users/jeffersonqx" target="_blank" rel="noopener noreferrer" aria-label="Dio" class="transform transition-transform duration-300 ease-in-out hover:scale-125">
-                    <IconDio class="text-[#eaf6fa]"/>
-                </a>
-            </ul>
-        </div> 
         </div>
-    </nav>
+        <h2 class="text-lg sm:text-xl text-[#e1eeef] font-semibold">Jefferson Gonçalves</h2>
+        <h3 class="text-sm sm:text-base font-medium text-[#909493]">Desenvolvedor Front End</h3>
+        <ul class='flex items-center gap-2 sm:gap-3 pt-4 flex-wrap'>
+            <li>
+                <a href="https://www.linkedin.com/in/jefferson-gbarbosa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" class="group">
+                 <IconLinkedin class="text-[#eaf6fa] transform transition-transform duration-300 ease-in-out hover:scale-125 "/>
+               </a>
+            </li>
+            <li>
+                <a href="https://github.com/jefferson-gbarbosa" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" class="group">
+                 <IconGithub class="text-[#eaf6fa] transform transition-transform duration-300 ease-in-out hover:scale-125"/>
+                </a>
+            </li>
+           <li>
+                <a href="https://www.frontendmentor.io/profile/jefferson-gbarbosa" target="_blank" rel="noopener noreferrer" aria-label="Front End Mentor" title="Front End Mentor" class="group">
+                    <IconFronEndMentor class="text-[#eaf6fa] transform transition-transform duration-300 ease-in-out hover:scale-125"/>
+                </a>
+           </li>
+           <li>
+            <a href="https://www.dio.me/users/jeffersonqx" target="_blank" rel="noopener noreferrer" aria-label="Dio" title="Dio" class="group">
+                <IconDio class="text-[#eaf6fa] transform transition-transform duration-300 ease-in-out hover:scale-125"/>
+            </a>
+           </li>  
+        </ul>
+        <div class="pt-6">
+            <a
+                href="/cv-dev-jefferson.pdf"
+                download
+                class="inline-flex items-center gap-2 px-5 py-2 rounded-md text-sm font-medium bg-[#e1eeef] transform transition-transform duration-300 ease-in-out hover:scale-105"
+            >
+                <IconArrowBarToDown class="w-5 h-5" />
+                <span>Download CV</span>
+            </a>
+        </div>
+    </div>
+</nav>
