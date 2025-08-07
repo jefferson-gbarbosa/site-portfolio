@@ -3,45 +3,49 @@ import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import CopyRight from "../components/CopyRight.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="desenvolvedor, portfolio, web, Jefferson, dev, projetos, tecnologia" />
     <meta name="author" content="Jefferson Gonçalves Barbosa" />
     <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#EAF6FA" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portfolio-jefferson-dev.netlify.app" />
     <meta property="og:image" content="/thumb-og.png" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="/thumb-og.png" />
 
+    <!-- Favicon & Sitemap -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="https://portfolio-jefferson-dev.netlify.app/" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{title}</title>
   </head>
 
-  <body>
+  <body class="antialiased">
     <header>
       <Nav />
     </header>
-    <main class="bg-[#EAF6FA]">
+    <main role="main" class="bg-[#EAF6FA] min-h-screen">
       <slot />
     </main>
-    <footer>
+    <footer role="contentinfo">
       <CopyRight />
     </footer>
     <ScrollToTop />
