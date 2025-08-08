@@ -104,15 +104,11 @@ Or follow the steps below:
 
    You can also deploy to GitHub Pages by pushing the `dist` folder to the `gh-pages` branch of your repository.
 
----
-
 ## Contributing
 
 [GitHub Repository](https://github.com/jefferson-gbarbosa/site-portfolio.git)
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss changes.
-
----
 
 ## License
 
